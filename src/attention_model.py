@@ -431,6 +431,8 @@ class TransitDelayPredictor(nn.Module):
             "learned_residual_minutes": residual_mins,
             "dominant_factor":          dominant,
             "feature_importance":       feature_importance,
+            # Raw (4,4) attention matrix for heatmap visualization
+            "attention_matrix": attn_weights[0].cpu().tolist(),
         }
 
     # ------------------------------------------------------------------
